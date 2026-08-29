@@ -41,8 +41,8 @@ EMBEDDING_MODEL_NAME = os.environ.get("EMBEDDING_MODEL", "sentence-transformers/
 
 HEADERS = {
     "User-Agent": (
-        "SIH-UK-India-Comparison (student project; contact:"
-        " biswajitnayak397@gmail.com)"
+        "SIH-UK-India-Comparison/6.1 (research/student project; contact:"
+        " student@example.com)"
     )
 }
 SEARCH_URL = "https://world.openfoodfacts.org/api/v2/search"
@@ -504,7 +504,7 @@ def add_product_by_barcode(barcode: str, out_dir: str = DATA_DIR) -> dict:
 
     overall = (
         round((0.50 * npm_score) + (0.30 * np.mean(add_scores)) + (0.20 * avg_ing), 2)
-        if add_scores else round((0.70 * npm_score) + (0.20 * avg_ing), 2)
+        if add_scores else round((0.70 * npm_score) + (0.30 * avg_ing), 2)
     )
     additive_score = round(float(np.mean(add_scores)), 2) if add_scores else None
     product_row = {
