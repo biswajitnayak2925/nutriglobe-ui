@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NutriGlobe — Food Health Comparator</title>
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">◒</span>
+        NutriGlobe
+      </div>
+      <div class="status ok" id="backend-status">Backend ready ✓</div>
+    </header>
+
+ 
+    <div id="error-banner" class="hidden"></div>
+
+
+    <section class="hero">
+      <div class="eyebrow"><i></i> Ingredient clarity, everywhere</div>
+      <h1>What’s <em>really</em> in your food?</h1>
+      <p class="hero-copy">Search products, compare regional formulas, or scan nutrition labels.</p>
+
+    
+      <div class="card">
+        <h2>Search by Product Name</h2>
+        <div class="search-row">
+          <input type="text" id="product-search" placeholder="e.g. Maggi noodles" aria-label="Search product">
+          <button id="search-btn">Search</button>
+        </div>
+       
+        <div id="search-results" class="results-container"></div>
+      </div>
+
+   
+      <div class="card">
+        <h2>Compare by Barcode</h2>
+        <div class="input-row">
+          <input type="text" id="barcode-input" placeholder="e.g. 8901058851937" aria-label="Barcode input">
+          <button id="barcode-btn">Compare</button>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <h2>Compare by Product Photo</h2>
+        <div class="input-row">
+          <input type="file" id="file-input" accept="image/*" aria-label="Upload label photo">
+          <button id="upload-btn">Upload & Compare</button>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="analysis" id="analysis-section">
+      <div class="section-intro">
+        <div>
+          <div class="kicker">Live Label Comparison</div>
+          <h2 id="product-title">Select or search a product</h2>
+        </div>
+      </div>
+
+     
+      <div class="compare-grid" id="compare-grid">
+        
+      </div>
+
+     
+      <div id="verdict-container" class="verdict hidden"></div>
+      <div id="recommendations-container" class="swaps hidden"></div>
+    </section>
+
+    <footer class="footer">
+      <div><strong>NutriGlobe</strong> · Food labels, made clear.</div>
+      <div>Data provided for educational purposes.</div>
+    </footer>
+  </main>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
