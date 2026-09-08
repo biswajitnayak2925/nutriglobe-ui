@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pandas
+numpy
+requests
+torch
+sentence-transformers
+pillow
+
+# Optional: needed only for image-based comparison input
+pyzbar
+pytesseract
